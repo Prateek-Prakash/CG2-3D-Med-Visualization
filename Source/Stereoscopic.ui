@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Stereoscopic</class>
+ <widget class="QMainWindow" name="Stereoscopic">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>523</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Stereoscopic</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QVTKWidget" name="vtkWidget"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::NoToolBarArea</set>
+   </property>
+   <property name="floatable">
+    <bool>true</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionTrackball"/>
+   <addaction name="actionJoystick"/>
+   <addaction name="separator"/>
+   <addaction name="actionFull"/>
+   <addaction name="actionSelected"/>
+   <addaction name="separator"/>
+   <addaction name="actionOTF"/>
+  </widget>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionTrackball">
+   <property name="text">
+    <string>Trackball</string>
+   </property>
+   <property name="toolTip">
+    <string>Use Trackball Interactor</string>
+   </property>
+  </action>
+  <action name="actionJoystick">
+   <property name="text">
+    <string>Joystick</string>
+   </property>
+   <property name="toolTip">
+    <string>Use Joystick Interactor</string>
+   </property>
+  </action>
+  <action name="actionFull">
+   <property name="text">
+    <string>Full</string>
+   </property>
+   <property name="toolTip">
+    <string>View Full Data</string>
+   </property>
+  </action>
+  <action name="actionSelected">
+   <property name="text">
+    <string>Selected</string>
+   </property>
+   <property name="toolTip">
+    <string>View Selected Data</string>
+   </property>
+  </action>
+  <action name="actionOTF">
+   <property name="text">
+    <string>OTF</string>
+   </property>
+   <property name="toolTip">
+    <string>Show OTF Graph</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QVTKWidget</class>
+   <extends>QWidget</extends>
+   <header>QVTKWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
